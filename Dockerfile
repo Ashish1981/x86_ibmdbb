@@ -15,4 +15,5 @@ RUN curl -fsSL https://github.com/krallin/tini/releases/download/${TINI_VERSION}
 COPY start.sh /usr/local/bin/start.sh
 RUN chmod +x /usr/local/bin/start.sh
 COPY tini-shim.sh /bin/tini
-ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/start.sh"]
+#ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/start.sh"]
+CMD ["/usr/local/bin/start.sh", "run"]
