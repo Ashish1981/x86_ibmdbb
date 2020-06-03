@@ -1,5 +1,5 @@
 FROM ashish1981/x86-ibmdbb:latest
-EXPOSE 9443 9080 9060
+EXPOSE 9443 9080
 ENV wlp=/wlp/bin
 
 # Use tini as subreaper in Docker container to adopt zombie processes
